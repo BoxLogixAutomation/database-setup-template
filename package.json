@@ -1,0 +1,29 @@
+{
+  "name": "database-setup-template",
+  "version": "1.0.0",
+  "description": "basic script to setup tables using nodemon to monitor for changes",
+  "main": "setup.js",
+  "scripts": {
+    "setup-dev": "nodemon -e js,json,sql setup.js --dev",
+    "setup-test": "node setup.js --test",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoxLogixAutomation/database-setup-template.git"
+  },
+  "keywords": [
+    "mssql",
+    "nodejs"
+  ],
+  "author": "Nathan Baker <pcnate@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BoxLogixAutomation/database-setup-template/issues"
+  },
+  "homepage": "https://github.com/BoxLogixAutomation/database-setup-template#readme",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "minimist": "^1.2.0"
+  }
+}

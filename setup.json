@@ -1,0 +1,42 @@
+{
+  "name": "Basic Database Setup",
+  "steps": [
+    {
+      "section": {
+        "description": "Removing tables",
+        "type": "sql"
+      },
+      "steps": [
+        "Tables/clear.sql"
+      ]
+    },
+    {
+      "section": {
+        "description": "Creating Dev stuffs",
+        "type": "sql"
+      },
+      "steps": [
+        "Tables/MOCK_DATA.sql",
+        "Views/defaultView.sql"
+      ]
+    },
+    {
+      "section": {
+        "description": "Create your tables/views/procedures in order",
+        "type": "sql"
+      },
+      "steps": [
+      ]
+    },
+    {
+      "section": {
+        "description": "Triggering a restart of the nodejs server if it is running",
+        "type": "cli"
+      },
+      "commands": {
+        "win32": "powershell (gci ${process.env.fileName}).LastWriteTime = Get-Date",
+        "linux": "touch ${process.env.fileName}"
+      }
+    }
+  ]
+}
